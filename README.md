@@ -38,9 +38,13 @@ A comprehensive Java console-based system for managing student records, tracking
 
 ## Project Structure
 
+This project is organized into two main areas:
+
+### Our Implementation Area (`src/`)
+**Empty skeleton classes** that we need to implement:
 ```
 src/
-├── dataStructures/      # Core data structure implementations
+├── dataStructures/      # Core data structure implementations (TODO)
 │   ├── LinkedList.java
 │   ├── Stack.java
 │   ├── Queue.java
@@ -48,20 +52,30 @@ src/
 │   ├── AVLTree.java
 │   ├── PriorityQueue.java
 │   └── HashTable.java
-├── models/              # Domain models
+├── models/              # Domain models (TODO)
 │   ├── Student.java
 │   ├── AttendanceRecord.java
 │   ├── AttendanceAlert.java
 │   └── UndoAction.java
-├── services/            # Business logic
+├── services/            # Business logic (TODO)
 │   ├── StudentService.java
 │   ├── AttendanceService.java
 │   └── ReportingService.java
-├── ui/                  # User interface
+├── ui/                  # User interface (TODO)
 │   └── ConsoleUI.java
-└── main/                # Entry point
+└── main/                # Entry point (TODO)
     └── SATS.java
 ```
+
+### Reference Examples (`examples/`)
+**Complete working implementations** for reference:
+- `examples/src/` - Full working source code
+- `examples/reports/` - Example report templates with detailed placeholders
+
+### Reports (`reports/`)
+**Empty report templates** that we need to fill in:
+- `TEAM_REPORT.md` - Team report template
+- `STUDENT1_CONTRIBUTION.md` through `STUDENT4_CONTRIBUTION.md` - Individual contribution templates
 
 ## Data Structures Used
 
@@ -87,34 +101,54 @@ src/
 
 ### Prerequisites
 - Java JDK 8 or higher
-- Command line terminal
+- Command line terminal (bash for Linux/Mac, or WSL/Git Bash for Windows)
 
-### Compilation
+### Quick Start
 
-Navigate to the project root directory and compile all Java files:
+#### 1. Run the Complete Examples (Reference Implementation)
 
-```bash
-javac -d bin src/dataStructures/*.java src/models/*.java src/services/*.java src/ui/*.java src/main/*.java
-```
-
-Or compile from the src directory:
+To see the fully working system:
 
 ```bash
-cd src
-javac -d ../bin dataStructures/*.java models/*.java services/*.java ui/*.java main/*.java
+./examples.sh
 ```
 
-### Running the Application
+This will:
+- Compile the complete working implementation from `examples/src/`
+- Run the Student Attendance Tracking System
+
+#### 2. Compile Our Implementation
+
+To compile our implementation in `src/` (currently empty skeleton classes):
+
+```bash
+./compile.sh
+```
+
+**Note:** The classes in `src/` are currently empty skeleton classes with `TODO` comments. We need to implement all the methods marked with `// TODO: Implement...`
+
+#### 3. Run Our Implementation
+
+After we implement the classes in `src/` and compile:
 
 ```bash
 java -cp bin main.SATS
 ```
 
-Or from the bin directory:
+### Manual Compilation
 
+If you prefer to compile manually:
+
+**For examples (complete implementation):**
 ```bash
-cd bin
-java main.SATS
+javac -d bin -encoding UTF-8 examples/src/dataStructures/*.java examples/src/models/*.java examples/src/services/*.java examples/src/ui/*.java examples/src/main/*.java
+java -cp bin main.SATS
+```
+
+**For our implementation (empty skeleton classes):**
+```bash
+javac -d bin -encoding UTF-8 src/dataStructures/*.java src/models/*.java src/services/*.java src/ui/*.java src/main/*.java
+java -cp bin main.SATS
 ```
 
 ## Usage Guide
@@ -153,11 +187,30 @@ java main.SATS
 - **Student 3**: Trees, Heaps, Advanced Structures
 - **Student 4**: Hash Tables, Sets, Maps, UI, Integration
 
+## Project Organization
+
+### How We're Organizing This
+
+1. **Implementation**: We're working in the `src/` folder. Each class has empty skeleton code with `TODO` comments showing what we need to implement.
+
+2. **Reference**: We can check `examples/src/` for complete working implementations if we need guidance.
+
+3. **Reports**: We need to fill in the empty templates in `reports/` folder. See `examples/reports/` for detailed example templates with placeholders.
+
+### File Structure Summary
+
+- **`src/`** - Empty skeleton classes (we implement here)
+- **`examples/src/`** - Complete working implementation (reference only)
+- **`reports/`** - Empty report templates (we fill in)
+- **`examples/reports/`** - Example report templates with placeholders (reference)
+
 ## Notes
 
 - All data structures are custom implementations (except Java's built-in Set interface for class management)
 - The system uses in-memory storage (data is lost when the program exits)
 - Date format: yyyy-MM-dd (e.g., 2024-01-15)
+- The `src/` folder contains empty skeleton classes that we need to implement
+- The `examples/` folder contains complete working code for reference only
 
 ## License
 
